@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // dotenv.config({path:"../.env"});
 
 
-MONGO_URI = "ADD YOUR MONGO URI"
+MONGO_URI = process.env.MONGO_URI
 ;
 const connectDB = async ()=>{
     try{
