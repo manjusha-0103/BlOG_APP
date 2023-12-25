@@ -5,7 +5,7 @@ const asyncHandler = require('express-async-handler');
 const jwt = require('jsonwebtoken')
 var bcrypt = require('bcryptjs');
 
-const JWT_SECRET ="ADD YOUR SECRETE KEY"
+const JWT_SECRET =process.env.JWT_SECRET
 
 const registerUser = asyncHandler(async(req,res)=>{
     try{
