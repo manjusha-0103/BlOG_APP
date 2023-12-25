@@ -30,7 +30,7 @@ app.use('/api/blog',require('./routes/blogroutes'))
 
 connectDB();
 
-app.get(async(res,req)=>{res.status(200).send("WELCOME HERE CREATE YOU OWN BLOG....")})
+app.get("/",async(res,req)=>{res.status(200).send("WELCOME HERE CREATE YOU OWN BLOG....")})
 // Load SSL certificate and key
 // const privateKey = fs.readFileSync('./cert/server.key', 'utf8');
 // const certificate = fs.readFileSync('./cert/server.cert', 'utf8');
