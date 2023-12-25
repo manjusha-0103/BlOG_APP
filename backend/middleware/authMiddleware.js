@@ -2,8 +2,7 @@ const jwt = require('jsonwebtoken');
 const asyncHandler = require('express-async-handler');
 const User = require('../models/user');
 require('dotenv').config({});
-
-const JWT_SECRET ="hhakhkgvbf5768xmnbshgsig"
+const JWT_SECRET ="ADD YOUR SECRETE KEY"
 
 const protect = asyncHandler(async (req, res, next) => {
     let token;

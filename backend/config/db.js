@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // dotenv.config({path:"../.env"});
 
 
-MONGO_URI = "mongodb+srv://mgkcode:pass2001@cluster0.rowyp49.mongodb.net/test?retryWrites=true&w=majority"
+MONGO_URI = "ADD YOUR MONGO URI"
 ;
 const connectDB = async ()=>{
     try{
