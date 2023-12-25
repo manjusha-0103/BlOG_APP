@@ -12,7 +12,7 @@ const rateLimit = require('express-rate-limit');
 // dotenv.config({});
 
 //console.log(process.env.PORT)
-const port =  5000;
+const port =  process.env.PORT
 const app = express();
 app.use(
     rateLimit({
@@ -32,16 +32,16 @@ connectDB();
 
 
 // Load SSL certificate and key
-const privateKey = fs.readFileSync('./cert/server.key', 'utf8');
-const certificate = fs.readFileSync('./cert/server.cert', 'utf8');
-const ca = fs.readFileSync('cert/manjusha.crt', 'utf8');
-const credentials = { key: privateKey, cert: certificate, ca:ca };
+// const privateKey = fs.readFileSync('./cert/server.key', 'utf8');
+// const certificate = fs.readFileSync('./cert/server.cert', 'utf8');
+// const ca = fs.readFileSync('cert/manjusha.crt', 'utf8');
+// const credentials = { key: privateKey, cert: certificate, ca:ca };
   
-const httpsServer = https.createServer(credentials, app)
-httpsServer.listen(port,()=> {console.log(`running on port ${port}`)});
-// app.listen(port, ()=>{
-//     console.log(`servere started on port ${port}`)
-// })
+//const httpsServer = https.createServer(credentials, app)
+//httpsServer.listen(port,()=> {console.log(`running on port ${port}`)});
+app.listen(port, ()=>{
+    console.log(`servere started on port ${port}`)
+})
 
 
 
